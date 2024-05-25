@@ -1,6 +1,17 @@
 from fastapi import FastAPI
-from typing import Union
+from dotenv import load_dotenv
+import uvicorn
+import os
 from api.user import user_router
+
+from typing import Union
+
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
+
+# Obtener el valor de una variable de entorno.
+port_server = os.getenv("PORT")
+print(f"{port_server}")
 
 app = FastAPI()
 
@@ -9,9 +20,17 @@ app.include_router(user_router.user, prefix="/api")
 
 
 
-# @app.get("/")
-# def read_root():
-#     return {"Hello": "World"}
+# corre uvicor con mi port
+if __name__=="__main__":
+    uvicorn.run("main:app", port=port_server, reload=True) 
+
+print(type(4))      
+print(type(4.5))      
+print(type("hola")) 
+print(type(False))   
+print(type([]))      
+print(type({}))      
+print(type(()))       
 
 
 # @app.get("/items/{item_id}")
