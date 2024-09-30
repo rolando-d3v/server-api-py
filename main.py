@@ -19,29 +19,22 @@ app = FastAPI()
 app.include_router(user_router.user, prefix="/api")
 
 
-
 # corre uvicor con mi port
-if __name__=="__main__":
-    uvicorn.run("main:app", port=port_server, reload=True) 
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=port_server, reload=True)
 
-print(type(4))      
-print(type(4.5))      
-print(type("hola")) 
-print(type(False))   
-print(type([]))      
-print(type({}))      
-print(type(()))       
+print(type(4))
+print(type(4.5))
+print(type("hola"))
+print(type(False))
+print(type([]))
+print(type({}))
+print(type(()))
 
 
 # @app.get("/items/{item_id}")
 # def read_item(item_id: int, q: Union[str, None] = None):
 #     return {"item_id": item_id, "q": q}
-
-
-
-
-
-
 
 
 # from smartcard.System import readers
@@ -84,18 +77,9 @@ print(type(()))
 #         print("Error al leer el número de DNI:", sw1, sw2)
 
 
-
-
-
-
-
 # except CardConnectionException as e:
 #     print("Error de conexión:", e)
 
 # finally:
 #     # Desconectar del lector
 #     connection.disconnect()
-
-
-
-
