@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+
 user = APIRouter()
 
 produto = [
@@ -7,7 +8,7 @@ produto = [
         "producto": "laptop dell",
         "description": "laptop ultra slim 2023",
         "precio": 4560,
-        "stock": 10,
+        "stock": 900,
     }
 ]
 
