@@ -23,7 +23,7 @@ app.include_router(user_router.user, prefix="/api")
 
 # corre uvicor con mi port
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=port_server, reload=True)
+    uvicorn.run("main:app", host="localhost", port=port_server, reload=True)
 
 # print(type(4))
 # print(type(4.5))
